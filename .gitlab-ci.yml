@@ -2,6 +2,8 @@ stages:
    - build
 build_code:
   stage: build
+  before_script:
+    - npm cli
   script:
-      - echo "running"
+      - ng build --prod
       
