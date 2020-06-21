@@ -2,9 +2,9 @@ stages:
    - build
 build_code:
   stage: build
-  image: trion/ng-cli
+  image: node:latest
   before_script:
-    - npm cli
+    - npm install --silent
   script:
       - ng build --prod
       
