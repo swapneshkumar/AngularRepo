@@ -6,5 +6,9 @@ build_code:
   before_script:
     - npm install --silent
   script:
-      - ng build --prod
+      - node_modules/.bin/ng build --prod --aot
+  artifacts:
+    name: "project-$CI_COMMIT_REF_NAME"
+    paths:
+      - dist/
       
